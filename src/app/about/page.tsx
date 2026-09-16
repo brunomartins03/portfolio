@@ -13,7 +13,7 @@ import {
   Row,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
-import TableOfContents from "@/components/about/TableOfContents";
+import TableOfContents from "@/components/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 
@@ -74,7 +74,7 @@ export default function About() {
           gap="32"
           s={{ hide: true }}
         >
-          <TableOfContents structure={structure} about={about} />
+          <TableOfContents structure={structure} tableOfContent={about.tableOfContent} />
         </Column>
       )}
       <Row fillWidth s={{ direction: "column"}} horizontal="center">

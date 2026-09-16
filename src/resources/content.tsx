@@ -297,6 +297,10 @@ const activities: Activities = {
   label: "Activities",
   title: `Activities – ${person.name}`,
   description: `Talks, research, publications, teaching, and volunteering by ${person.name}`,
+  tableOfContent: {
+    display: true,
+    subItems: false,
+  },
   talks: {
     display: true,
     title: "Talks",

@@ -234,6 +234,13 @@ export interface Work extends BasePageConfig {}
  * @description Configuration for the Activities page, covering talks, research, teaching, publications, and volunteering.
  */
 export interface Activities extends BasePageConfig {
+  /** Table of contents configuration */
+  tableOfContent: {
+    /** Whether to display the table of contents */
+    display: boolean;
+    /** Whether to show sub-items in the table of contents */
+    subItems: boolean;
+  };
   /** Talks section */
   talks: {
     display: boolean;
