@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Bruno",
   lastName: "Martins",
   name: `Bruno Martins`,
-  role: "AI/ML & Backend Engineer",
+  role: "Software Engineer & AI/ML Engineer",
   avatar: "/images/me.png",
   email: "bruno.martval@gmail.com",
   location: "America/Sao_Paulo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -122,9 +122,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based{" "}
+        {person.role.toLowerCase()}, currently pursuing a B.Sc. in Computer Software Engineering
+        at the University of Brasília (UnB). His work spans agentic AI systems, backend
+        engineering, and research at the intersection of machine learning and formal mathematics.
       </>
     ),
   },
@@ -133,42 +134,38 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Brazil's Presidency of the Republic",
+        timeframe: "Aug 2025 - Present",
+        role: "Software Engineer & AI Engineer Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Built agentic AI applications for AIOps use cases using Python, LangGraph, Ollama, and
+            Hugging Face, automating operational workflows.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Developed and integrated a new DevOps pipeline alongside the DevOps team, streamlining
+            build and release processes.
+          </>,
+          <>
+            Deployed containerized applications to production using Docker, Jenkins, Helm, ArgoCD,
+            and Kubernetes.
+          </>,
+          <>Performed data cleaning and feature engineering to prepare datasets for machine learning models.</>,
+          <>Built backend APIs in Python (FastAPI) and Go (GraphQL) to support internal services.</>,
+          <>
+            Developed full-stack web applications using TypeScript/JavaScript, React, and Shadcn
+            UI.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Nova Web IT Consulting and Services",
+        timeframe: "April 2025 - Jul 2025",
+        role: "Game Design Intern (Summer Internship)",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Developed 3D games in Unity for cross-platform deployment on desktop and mobile devices.</>,
+          <>Built backend APIs in C# and .NET to support gameplay and application logic.</>,
         ],
         images: [],
       },
@@ -180,14 +177,34 @@ const about: About = {
     institutions: [
       {
         name: "Institute of Pure and Applied Mathematics — IMPA",
-        description: <>Visiting student; Summer Course - Master's Program in Machine Learning</>,
+        description: (
+          <>Visiting student; Summer Course - Master's Program in Machine Learning (Jan. 2026 - Fev. 2026)</>
+        ),
       },
       {
         name: "University of Brasília — UnB",
-        description: <>
-        <p>Ranked among the top 10 universities in Brazil (2026)</p>
-        <p>Bachelor of Computer Software Engineering; GPA: (4.4/5)</p>
-        <p>Bachelor Thesis: </p></>,
+        description: (
+          <>
+            <p>B.Sc. in Computer Software Engineering (Aug. 2021 - Dec. 2026, expected); GPA: 4.4/5</p>
+            <p>
+              Ranked among the best universities in Brazil in 2026 national rankings
+            </p>
+            <p>
+              Bachelor Thesis (in progress): Formalizing Mathematics: An Agentic LLM with
+              Neuro-Symbolic Feedback and RL-based self-improvement approach for the
+              autoformalization of mathematical proofs
+            </p>
+          </>
+        ),
+      },
+      {
+        name: "Interschool Center of Languages — CIL",
+        description: (
+          <>
+            <p>French Language — Equivalent to B2 CEFR (2019 - 2022)</p>
+            <p>English Language — Equivalent to C1 CEFR (2017 - 2021)</p>
+          </>
+        ),
       },
     ],
   },
@@ -196,60 +213,62 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Languages",
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Python" },
+          { name: "Go" },
+          { name: "Rust" },
+          { name: "TypeScript/JavaScript", icon: "javascript" },
+          { name: "C/C++" },
+          { name: "SQL" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Frameworks & Tools",
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Django" },
+          { name: "Flask" },
+          { name: "FastAPI" },
+          { name: "Gin" },
+          { name: "Node.js", icon: "nextjs" },
+          { name: "Kafka" },
+          { name: "RabbitMQ" },
+          { name: "GraphQL" },
+          { name: "Docker" },
+          { name: "Kubernetes" },
+          { name: "Bash" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "ML & AI",
+        tags: [
+          { name: "PyTorch" },
+          { name: "TensorFlow" },
+          { name: "Scikit-learn" },
+          { name: "NumPy" },
+          { name: "Pandas" },
+          { name: "Selenium" },
+          { name: "LangChain" },
+          { name: "LangGraph" },
+          { name: "CrewAI" },
         ],
+        images: [],
+      },
+      {
+        title: "Databases & Cloud",
+        tags: [
+          { name: "MySQL" },
+          { name: "SQLite" },
+          { name: "PostgreSQL" },
+          { name: "Oracle" },
+          { name: "Pinecone" },
+          { name: "ChromaDB" },
+          { name: "MongoDB" },
+          { name: "AWS (EC2, S3, RDS, DynamoDB)" },
+        ],
+        images: [],
       },
     ],
   },
@@ -323,5 +342,4 @@ const gallery: Gallery = {
     },
   ],
 };
-
 export { person, social, newsletter, home, about, blog, work, gallery };
