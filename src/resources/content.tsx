@@ -96,7 +96,7 @@ const home: Home = {
   subline: (
     <>
       I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      <Text as="span" size="xl" weight="strong">Brazil's Presidency of The Republic</Text>, where I develop full-stack projects tailored to DevOps, AIOps and automation.
     </>
   ),
 };
@@ -115,7 +115,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendar.app.google/rEqFJEAg4BCY5j6s5",
   },
   intro: {
     display: true,
