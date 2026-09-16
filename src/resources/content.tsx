@@ -122,7 +122,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based{" "}
+        {person.firstName} is a Brasília-based{" "}
         {person.role.toLowerCase()}, currently pursuing a B.Sc. in Computer Software Engineering
         at the University of Brasília (UnB). His work spans agentic AI systems, backend
         engineering, and research at the intersection of machine learning and formal mathematics.
