@@ -13,7 +13,7 @@ import {
   Row,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
-import TableOfContents from "@/components/about/TableOfContents";
+import TableOfContents from "@/components/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 
@@ -74,7 +74,7 @@ export default function About() {
           gap="32"
           s={{ hide: true }}
         >
-          <TableOfContents structure={structure} about={about} />
+          <TableOfContents structure={structure} tableOfContent={about.tableOfContent} />
         </Column>
       )}
       <Row fillWidth s={{ direction: "column"}} horizontal="center">
@@ -96,7 +96,7 @@ export default function About() {
             <Avatar src={person.avatar} size="xl" />
             <Row gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
+              {/* {person.location} */} Brasília, Brazil
             </Row>
             {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">

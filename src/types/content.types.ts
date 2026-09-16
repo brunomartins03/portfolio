@@ -230,17 +230,66 @@ export interface Blog extends BasePageConfig {}
 export interface Work extends BasePageConfig {}
 
 /**
- * Gallery page configuration.
- * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
+ * Activities page configuration.
+ * @description Configuration for the Activities page, covering talks, research, teaching, publications, and volunteering.
  */
-export interface Gallery extends BasePageConfig {
-  /** List of images in the gallery */
-  images: Array<{
-    /** Image source path */
-    src: string;
-    /** Image alt text */
-    alt: string;
-    /** Image orientation (horizontal/vertical) */
-    orientation: string;
-  }>;
+export interface Activities extends BasePageConfig {
+  /** Table of contents configuration */
+  tableOfContent: {
+    /** Whether to display the table of contents */
+    display: boolean;
+    /** Whether to show sub-items in the table of contents */
+    subItems: boolean;
+  };
+  /** Talks section */
+  talks: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      title: string;
+      event: string;
+    }>;
+  };
+  /** Research section */
+  research: {
+    display: boolean;
+    title: string;
+    projects: Array<{
+      title: string;
+      role: string;
+      timeframe: string;
+      achievements: React.ReactNode[];
+    }>;
+  };
+  /** Publications section */
+  publications: {
+    display: boolean;
+    title: string;
+    items: Array<{
+      title: string;
+      status: string;
+    }>;
+  };
+  /** Teaching section */
+  teaching: {
+    display: boolean;
+    title: string;
+    roles: Array<{
+      title: string;
+      organization: string;
+      timeframe: string;
+      description: React.ReactNode;
+    }>;
+  };
+  /** Volunteering section */
+  volunteering: {
+    display: boolean;
+    title: string;
+    roles: Array<{
+      organization: string;
+      role: string;
+      timeframe: string;
+      description: React.ReactNode;
+    }>;
+  };
 }
