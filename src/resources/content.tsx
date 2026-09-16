@@ -393,10 +393,16 @@ const activities: Activities = {
         timeframe: "Fev 2022 - Dez 2025",
         description: (
           <>
-            Monitored students in the following subjects: Calculus, Multivariable Calculus,
-            Algorithms and Computer Programming, Discrete Mathematics I, Fundamentals of Computer
-            Architecture, Probability and Statistics Applied to Engineering, and Distributed and
-            Parallel Systems Programming.
+            Monitored students in the following subjects:
+            <ul>
+              <li>Calculus</li>
+              <li>Multivariable Calculus</li>
+              <li>Algorithms and Computer Programming</li>
+              <li>Discrete Mathematics I</li>
+              <li>Fundamentals of Computer Architecture</li>
+              <li>Probability and Statistics Applied to Engineering</li>
+              <li>Distributed and Parallel Systems Programming</li>
+            </ul>
           </>
         ),
       },
