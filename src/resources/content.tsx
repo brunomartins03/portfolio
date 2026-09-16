@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Activities, Blog, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, SmartLink, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -292,54 +292,133 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+const activities: Activities = {
+  path: "/activities",
+  label: "Activities",
+  title: `Activities – ${person.name}`,
+  description: `Talks, research, publications, teaching, and volunteering by ${person.name}`,
+  talks: {
+    display: true,
+    title: "Talks",
+    items: [
+      {
+        title: "Introduction to programming of cloud applications with Kubernetes",
+        event: "UnB's 2025 Academic Week",
+      },
+      {
+        title: "Workshop: Introduction to the formalization of mathematical proofs in Lean 4",
+        event: "UnB's 2026 Academic Week – upcoming",
+      },
+      {
+        title: "Artificial Intelligence – Beyond the Language Models",
+        event: "UnB's 2026 Academic Week – upcoming",
+      },
+    ],
+  },
+  research: {
+    display: true,
+    title: "Research",
+    projects: [
+      {
+        title: "Diabetic Retinopathy Detection",
+        role: "Undergraduate Researcher",
+        timeframe: "Sep 2024 - Sep 2025",
+        achievements: [
+          <>
+            Researched clustering, ensemble, and deep learning methods to classify diabetic
+            retinopathy severity from fundus images.
+          </>,
+          <>
+            Implemented and benchmarked SVM, K-means, DBSCAN, Deep Clustering, and CNNs (transfer
+            learning) on public datasets, achieving up to 90% accuracy on binary classification
+            and 88% on multi-class (5-class) classification.
+          </>,
+          <>
+            Conducted research as part of a partnership between UnB's Biomedical Engineering
+            Master's Program and the Erica Project, focused on cardiovascular disease detection in
+            Brazil's youth population.
+          </>,
+          <>Used PyTorch, TensorFlow, scikit-learn, pandas, and NumPy throughout the research pipeline.</>,
+        ],
+      },
+      {
+        title: "Metaverse & Digital Twins",
+        role: "Undergraduate Researcher",
+        timeframe: "Sep 2025 - Present",
+        achievements: [
+          <>
+            Researching software-hardware integration for metaverse and digital twin systems,
+            combining IoT with virtual/augmented reality.
+          </>,
+          <>
+            Designed and implemented bidirectional synchronization between physical devices and
+            digital twin models for educational applications.
+          </>,
+          <>
+            Built a proof-of-concept integrating a mini robotic arm with Decentraland using MQTT
+            and WebSockets for real-time physical-virtual synchronization.
+          </>,
+          <>Built with Go, Arduino, Decentraland SDK, and TypeScript/JavaScript.</>,
+        ],
+      },
+    ],
+  },
+  publications: {
+    display: true,
+    title: "Publications",
+    items: [
+      {
+        title: "Diabetic Retinopathy Detection (manuscript in preparation)",
+        status: "Expected Dec 2026",
+      },
+      {
+        title: "Metaverse & Digital Twins (manuscript in preparation)",
+        status: "Expected Dec 2026",
+      },
+    ],
+  },
+  teaching: {
+    display: true,
+    title: "Teaching",
+    roles: [
+      {
+        title: "Calculus Tutor",
+        organization: "University of Brasília's ELOS Program",
+        timeframe: "Aug 2023 - Sep 2024",
+        description: <>Elaborated classes and calculus assignments to students.</>,
+      },
+      {
+        title: "Monitor",
+        organization: "University of Brasília's Monitoring Program",
+        timeframe: "Fev 2022 - Dez 2025",
+        description: (
+          <>
+            Monitored students in the following subjects: Calculus, Multivariable Calculus,
+            Algorithms and Computer Programming, Discrete Mathematics I, Fundamentals of Computer
+            Architecture, Probability and Statistics Applied to Engineering, and Distributed and
+            Parallel Systems Programming.
+          </>
+        ),
+      },
+    ],
+  },
+  volunteering: {
+    display: true,
+    title: "Volunteering",
+    roles: [
+      {
+        organization: "Debian Inc.",
+        role: "Open source contributor",
+        timeframe: "Oct 2024 - Fev 2025",
+        description: (
+          <>
+            Collaborated for one semester with Debian's Brazilian Team to update and maintain core
+            Debian apt packages.
+          </>
+        ),
+      },
+    ],
+  },
 };
-export { person, social, newsletter, home, about, blog, work, gallery };
+
+export { person, social, newsletter, home, about, blog, work, activities };
